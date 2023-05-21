@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar tarefa</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Adicionar tarefa</h1>
+    </header>
+    <main>
+        <section id="formulario">
+            <p>
+                <label for="materia">Selecione a matéria: </label>
+                    <select name="name" id="materia">
+                        <option value="Matemática">Matemática</option>
+                        <option value="Português">Português</option>
+                        <option value="Espanhol">Espanhol</option>
+                        <option value="Física">Física</option>
+                        <option value="Artes">Artes</option>
+                        <option value="Biologia">Biologia</option>
+                        <option value="Química">Química</option>
+                        <option value="Geografia">Geografia</option>
+                        <option value="Inglês">Inglês</option>
+                        <option value="Educação física">Educação física</option>
+                        <option value="História">História</option>
+                        <option value="Sociologia">Sociologia</option>
+                        <option value="Sociologia-TRI">Sociologia-TRI</option>
+                        <option value="Projeto de vida">Projeto de vida</option>
+                    </select>
+            </p>
+            <p>
+                <label for="data">Selecione a data de entrega:  <input type="date" name="name1" id="data"></label>
+            </p>
+            <p>
+                <label for="conteudo">Escreva o conteúdo: </label> <input type="text" name="name2" id="conteudo">
+            </p>
+        </section> 
+        <button id="salvar">Salvar</button> 
+        <section id="cabeçalho">
+            <p class="cabeçalho">Matéria</p>
+            <p class="cabeçalho">Data</p>
+            <p class="cabeçalho">Conteúdo</p>
+            <p class="cabeçalho">Excluir</p>
+        </section> 
+        <section>
+            <div id="dado1" class="dados"></div>
+            <div id="dado2" class="dados"></div>
+            <div id="dado3" class="dados"></div>
+            <div id="dado4" class="dados"></div>
+        </section>
+    </main>
+</body>
+<script src="funçoes.js"></script>
+</html>

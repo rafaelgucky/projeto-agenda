@@ -1,0 +1,62 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    text-align: center;
+    margin-bottom: 50px;
+}
+main{
+    max-width: 800px;margin: auto;
+    text-align: center;
+}
+p{
+    margin-top: 40px;
+}
+button{
+    display: block;
+    border: 2px solid white;
+    background-color: gray;
+    color: white;
+    font-size: 13pt;
+    margin: auto;
+    margin-top: 50px;
+    cursor: pointer;
+    width: 99%;
+}
+button:hover{
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+}
+.dados{
+    margin-top: 5px;
+    line-height: 30px;
+    width: 22%;
+    display: inline-block;
+    background-color: gray;
+    padding: 5px;
+}
+.apagar{
+    display: inline-block;
+    margin: 0px;
+}
+.cabeçalho{
+    display: inline-block;
+    width: 22%;
+    background-color: rgb(97, 97, 97);
+    padding: 5px;
+    margin: 0px;
+    margin-top: 45px;
+}
+button#salvar{
+    width: 100px;
+}
+section#formulario{
+    background-color: gray;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
