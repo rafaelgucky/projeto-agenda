@@ -23,27 +23,35 @@ function salvar(){
     ver()
 }
 function ver(){
-    let dado1 = window.document.getElementById('dado1')
-    let dado2 = window.document.getElementById('dado2')
-    let dado3 = window.document.getElementById('dado3')
-    let dado4 = window.document.getElementById('dado4')
-    dado1.innerHTML = ''
-    dado2.innerHTML = ''
-    dado3.innerHTML = ''
-    dado4.innerHTML = ''
+    // let dado1 = window.document.getElementById('dado1')
+    // let dado2 = window.document.getElementById('dado2')
+    // let dado3 = window.document.getElementById('dado3')
+    // let dado4 = window.document.getElementById('dado4')
+    // dado1.innerHTML = ''
+    // dado2.innerHTML = ''
+    // dado3.innerHTML = ''
+    // dado4.innerHTML = ''
     dado = numero_de_tarefas * 4
     let ndiv = 1
-    
+    let qdivs = 1
+
     for(i = 1; i <= dado; i++){
-        let div = window.document.getElementById(`dado${ndiv}`)
         if(localStorage.getItem(`dado${i}`)){
-            div.innerHTML += localStorage.getItem(`dado${i}`) + '<br>'
-        }
-        if(ndiv == 4){
-            ndiv = 1
-            continue
-        }
+            let div = window.document.getElementById('dado')
+            if(ndiv == 1){
+                div.innerHTML += `<div id='n${qdivs}' class='divdados'><p id='pdados'>${localStorage.getItem(`dado${i}`)}</p></div>`
+            }
+            else{
+                div = document.getElementById(`n${qdivs}`)
+                div.innerHTML += `<p id='pdados'>${localStorage.getItem(`dado${i}`)}</p>`
+            }
+            if(ndiv == 4){
+                qdivs ++
+                ndiv = 1
+                continue
+            }
         ndiv++
+        }
     }
 }
 ver()
