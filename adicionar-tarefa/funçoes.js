@@ -7,6 +7,14 @@ let numero_de_tarefas = localStorage.getItem('numero_de_tarefas')
 let dado = numero_de_tarefas * 3
 let onde_começar = 1
 
+document.addEventListener('keyup', function(e){
+    if(e.key == 'Enter'){
+        if(confirm('Salvar?')){
+            salvar()
+        }
+    }
+})
+
 botao.addEventListener('click', salvar)
 
 function salvar(){
@@ -23,21 +31,16 @@ function salvar(){
     ver()
 }
 function ver(){
-    // let dado1 = window.document.getElementById('dado1')
-    // let dado2 = window.document.getElementById('dado2')
-    // let dado3 = window.document.getElementById('dado3')
-    // let dado4 = window.document.getElementById('dado4')
-    // dado1.innerHTML = ''
-    // dado2.innerHTML = ''
-    // dado3.innerHTML = ''
-    // dado4.innerHTML = ''
+    let div = window.document.getElementById('dado')
     dado = numero_de_tarefas * 4
     let ndiv = 1
     let qdivs = 1
 
+    div.innerHTML = ''
+
     for(i = 1; i <= dado; i++){
+        div = window.document.getElementById('dado')
         if(localStorage.getItem(`dado${i}`)){
-            let div = window.document.getElementById('dado')
             if(ndiv == 1){
                 div.innerHTML += `<div id='n${qdivs}' class='divdados'><p id='pdados'>${localStorage.getItem(`dado${i}`)}</p></div>`
             }

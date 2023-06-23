@@ -30,25 +30,13 @@ button:hover{
     color: black;
     border: 3px solid black;
 }
-.dados{
-    margin-top: 5px;
-    line-height: 30px;
-    width: 21%;
-    display: inline-block;
-    background-color: gray;
-    padding: 5px;
-}
 .apagar{
     display: inline-block;
     margin: 0px;
 }
 .cabeçalho{
-    display: inline-block;
-    width: 21%;
     background-color: rgb(97, 97, 97);
     padding: 5px;
-    margin: 0px;
-    margin-top: 45px;
 }
 button#salvar{
     width: 100px;
@@ -60,6 +48,51 @@ section#formulario{
     padding: 10px;
     border-radius: 10px;
 }
-div#dado2{
-    font-size: 9pt;
+p#pdados{
+    margin: 0px;
+    display: inline-block;
+    width: 95%;
+    overflow-wrap: break-word;
+}
+.divdados{
+    display: grid;
+    grid-template-columns: 26% 26% 26% 20%;
+    align-items: center;
+    border: 2px solid black;
+    margin: 5px;
+}
+.dados{
+    margin-top: 5px;
+    line-height: 30px;
+    width: 90%;
+    display: inline-block;
+    background-color: gray;
+    padding: 5px;
+}
+section#cabeçalho{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 26% 26% 26% 20%;
+    width: 93%;
+}
+
+@media (max-width: 499px) {
+    p#pdados{
+        margin: 0px;
+        display: inline-block;
+        width: 95%;
+        overflow-wrap: break-word;
+        font-size: 6pt;
+    }
+    .divdados{
+        display: grid;
+        grid-template-columns: 26% 30% 26% 15%;
+        align-items: center;
+        border: 2px solid black;
+        margin: 5px;
+        font-size: 14pt;
+    }
+    button{
+        font-size: 9pt;
+    }
 }
